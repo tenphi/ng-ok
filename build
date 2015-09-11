@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "ng-ok transpiling..."
+babel -d lib/ src/

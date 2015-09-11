@@ -1,0 +1,25 @@
+{
+  "name": "ng-ok",
+  "version": "0.0.1",
+  "description": "Simplified API for Angular modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "api",
+    "module",
+    "directive",
+    "component",
+    "service",
+    "simple",
+    "class",
+    "es6"
+  ],
+  "author": "Andrey Yamanov <tenphi@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.8.23"
+  }
+}
