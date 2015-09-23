@@ -211,7 +211,7 @@
             proto = Reflect.getPrototypeOf(proto);
           }
 
-          // sync methods from prototypes
+          // bind methods from prototypes
           props.filter( (key) => {
             if (!key.startsWith('$') && !key.startsWith('_') && typeof(instance[key]) === 'function') {
               $scope[key] = instance[key].bind(instance);
@@ -247,12 +247,13 @@
               let instance = $ctrls[0];
               let injectables = instance.$injectables;
 
+              injectables.$ctrls = $ctrls;
+
               $ctrls.slice(1).forEach( ctrl => {
                 if (ctrl) {
                   let [name] = getNameAndType(ctrl.constructor);
                   instance[name] = ctrl;
                   injectables[name] = ctrl;
-                  syncedProps.push(name);
                 }
               });
 
